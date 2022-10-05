@@ -1,2 +1,42 @@
+```{r}
+geom_point(
+  aes(
+    fill=country,
+    stroke=region,
+    alpha=可能是個類別資料(非oecd國家)
+  ),
+  alpha
+)
+```
 
+```{r}
+geom_point()+
+  geom_line()
+```
+
+```{r}
+data.frame(
+  country=c("J","J","J","usa","usa"),
+  threeValues=c(100,50,23),
+  alpha=c(1,0.5,0.5,1)
+)
+```
+
+```{r}
+geom_point()+
+  geom_point()+
+  geom_point()
+```
+
+```{r}
+data.frame(
+  country=c("1","2","3","4"),
+  isOECD=c(1,0,0,1)
+)->df0
+
+geom_point(
+  aes(alpha=isOECD),
+  data=df0
+  )
+```
 
